@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prática</title>
+  </head>
+  <body>
+    <!---🟢 Exercício 1: Nome e sobrenome Peça ao usuário seu nome e sobrenome, e
+    exiba: O nome completo. A quantidade total de letras (sem espaços). O nome
+    completo todo em minúsculas e em maiúsculas. --->
+
+    <script>
+      nome = window.prompt("Qual o seu nome?");
+      sobrenome = window.prompt("Qual seu sobrenome?");
+      completo = nome + sobrenome;
+
+      document.write(
+        `Seu nome completo é ${nome} ${sobrenome}. A quantidade total de letras é ${completo.length}, e seu primeiro nome é ${nome}. <br>`
+      );
+      document.write(
+        `Seu nome completo maiusculo é ${completo.toUpperCase()} e minusculo é ${completo.toLowerCase()}`
+      );
+    </script>
+  </body>
+</html>

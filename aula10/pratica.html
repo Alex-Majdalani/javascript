@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prática da Média</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      body > h1 {
+        color: green;
+        text-align: center;
+      }
+      body > p {
+        color: #fff;
+        text-align: justify;
+      }
+      div#materias {
+        background-color: rgba(128, 128, 128, 0.733);
+        padding: 5px;
+        border-radius: 5px;
+        display: block;
+        margin: center;
+      }
+      div#materias > label,
+      input {
+        width: 50px;
+      }
+      div#materias > #botao {
+        width: 50px;
+      }
+      div#res {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Exercício</h1>
+    <p>
+      Crie um esquema de média escolar, onde o professor irá adicionar a nota do
+      aluno para as matérias de: Português, Matemática, História, Geografia,
+      Física e Quimica. Ao final o programa irá calcular a média desse aluno.
+    </p>
+    <div id="materias">
+      <p>
+        <label for="iport">Português </label
+        ><input type="number" name="port" id="iport" />
+      </p>
+      <p>
+        <label for="imat">Matemática </label
+        ><input type="number" name="mat" id="imat" />
+      </p>
+      <p>
+        <label for="igeo">Geografia </label
+        ><input type="number" name="geo" id="igeo" />
+      </p>
+      <p>
+        <label for="ihis">História </label
+        ><input type="number" name="hist" id="ihis" />
+      </p>
+      <p>
+        <label for="ifis">Física </label
+        ><input type="number" name="fis" id="ifis" />
+      </p>
+      <p>
+        <label for="iqui">Quimica </label
+        ><input type="number" name="qui" id="iqui" />
+      </p>
+      <input id="botao" type="button" value="Média" onclick="media()" />
+    </div>
+    <div id="res">Resultado</div>
+
+    <script>
+      function media() {
+        var port = window.document.getElementById("iport");
+        var mat = window.document.getElementById("imat");
+        var geo = window.document.getElementById("igeo");
+        var hist = window.document.getElementById("ihis");
+        var fis = window.document.getElementById("ifis");
+        var qui = window.document.getElementById("iqui");
+        var res = window.document.getElementById("res");
+        var n1 = Number(port.value);
+        var n2 = Number(mat.value);
+        var n3 = Number(geo.value);
+        var n4 = Number(hist.value);
+        var n5 = Number(fis.value);
+        var n6 = Number(qui.value);
+        var media = (n1 + n2 + n3 + n4 + n5 + n6) / 6;
+        res.innerHTML = `A média é ${media}`;
+      }
+    </script>
+  </body>
+</html>

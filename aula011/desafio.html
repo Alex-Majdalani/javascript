@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio</title>
+  </head>
+  <body>
+    <h1>Nacionalidade</h1>
+    Digite seu País <input type="text" name="pais" id="ipais" />
+    <input type="button" value="verificar" onclick="verificar()" />
+    <div id="res"></div>
+
+    <script>
+      function verificar() {
+        var digite = window.document.getElementById("ipais");
+        var naci = digite.value;
+        var res = window.document.getElementById("res");
+        if (naci == "Brasil") {
+          res.innerHTML = `Você é Brasilieiro.`;
+        } else {
+          res.innerHTML = `Você é estrangeiro.`;
+        }
+      }
+    </script>
+  </body>
+</html>

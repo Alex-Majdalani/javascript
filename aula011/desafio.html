@@ -4,14 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Desafio</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        background-color: rgb(4, 182, 28);
+      }
+      body > h1 {
+        background-color: rgba(230, 255, 1, 0.918);
+        text-align: center;
+      }
+      div#campo {
+        padding: 10px;
+      }
+      div#campo > p > input {
+        margin-top: 10px;
+        width: 275px;
+        height: 30px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 4px rgba(3, 15, 189, 0.568);
+        background-color: rgb(4, 8, 231);
+        color: #fff;
+      }
+      div#res {
+        background-color: #fff;
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 278px;
+        height: 30px;
+        border-radius: 5px;
+      }
+    </style>
   </head>
   <body>
     <h1>Nacionalidade</h1>
-    Digite seu País <input type="text" name="pais" id="ipais" />
-    <input type="button" value="verificar" onclick="verificar()" />
+    <div id="campo">
+      Digite seu País <input type="text" name="pais" id="ipais" />
+
+      <p>
+        <input
+          id="botao"
+          type="button"
+          value="verificar"
+          onclick="verificar()"
+        />
+      </p>
+    </div>
     <div id="res"></div>
 
     <script>
+      var cor = window.document.getElementById("botao");
+      cor.addEventListener("mouseenter", entrar);
+      cor.addEventListener("mouseout", sair);
+      function entrar() {
+        cor.style.background = "yellow";
+      }
+      function sair() {
+        cor.style.background = "rgb(4, 8, 231)";
+      }
+
       function verificar() {
         var digite = window.document.getElementById("ipais");
         var naci = digite.value;

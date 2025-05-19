@@ -1,7 +1,9 @@
 var i = 1;
-var f = 10;
-var p = 2;
+var f = 50;
+var p = 5;
 
-for (i; i <= f; i += p) {
-  console.log(i);
+if (i >= 0 && i <= f) {
+  for (i; i >= 0 && i <= f; i += p) {
+    console.log("O valor é" + i);
+  }
 }
